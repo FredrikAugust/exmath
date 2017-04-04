@@ -21,7 +21,8 @@ def deps do
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/exmath](https://hexdocs.pm/exmath).
+## Documentation
+
+You can generate documentation by moving to the project directory and running
+`mix docs`, and opening `docs/index.html` with your favourite browser.
 
