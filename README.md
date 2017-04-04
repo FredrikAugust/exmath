@@ -8,6 +8,7 @@ Exmath is a library that provides some quite specific math formulas.
 * nPr formula
 * nCr formula
 * Retrieve a row from Pascals triangle
+* Hypergeometric distribution 
 
 ## Installation
 
