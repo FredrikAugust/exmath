@@ -31,4 +31,17 @@ defmodule Exmath do
   def pascals_triangle_row(r) do
     Enum.map((0..r), fn(c) -> nCr(r, c) end)
   end
+
+  @doc """
+  Hypergeometric distribution without replacement
+
+  # Parameters
+  * k -> target employed
+  * nn -> total pool
+  * kk -> target total
+  * n -> total employed, amount to take
+  """
+  def hypergeometric_distribution(k, nn, kk, n) do
+    (nPr(kk, k)*nPr(nn-kk, n-k))/nPr(nn, n)
+  end
 end

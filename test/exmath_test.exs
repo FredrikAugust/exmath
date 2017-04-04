@@ -33,4 +33,9 @@ defmodule ExmathTest do
   test "prints 5th row of pascals triangle" do
     assert Exmath.pascals_triangle_row(4) == [1.0, 4.0, 6.0, 4.0, 1.0]
   end
+
+  test "hypergeometric distribution" do
+    # The probability that neither of the next two cards turned are clubs
+    assert Float.round(Exmath.hypergeometric_distribution(0, 47, 9, 2), 2) == 0.65
+  end
 end
