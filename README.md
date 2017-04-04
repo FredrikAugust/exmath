@@ -12,8 +12,7 @@ Exmath is a library that provides some quite specific math formulas.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `exmath` to your list of dependencies in `mix.exs`:
+Add this to your `mix.exs` file.
 
 ```elixir
 def deps do
