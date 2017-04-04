@@ -38,4 +38,12 @@ defmodule ExmathTest do
     # The probability that neither of the next two cards turned are clubs
     assert Float.round(Exmath.hypergeometric_distribution(0, 47, 9, 2), 2) == 0.65
   end
+
+  test "average growth between two points" do
+    assert Exmath.average_growth({1, 1}, {2, 2}) == 1.0
+  end
+
+  test "average growth in same point" do
+    assert Exmath.average_growth({1, 1}, {1, 1}) == 0.0
+  end
 end

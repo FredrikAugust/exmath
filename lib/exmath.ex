@@ -45,7 +45,14 @@ defmodule Exmath do
     (nPr(kk, k)*nPr(nn-kk, n-k))/nPr(nn, n)
   end
 
-  # Delegate all of the default functions in erlangs math module
+  def average_growth(p1, p2) when p1 == p2, do: 0.0
+
+  @doc """
+  Get the average growth-factor between two points
+  """
+  def average_growth({p1_x, p1_y}, {p2_x, p2_y}), do: (p2_y-p1_y)/(p2_x-p1_x)
+
+  # Delegate all of the default functions in erlangs math module {{{
   defdelegate acos(x), to: :math
   defdelegate acosh(x), to: :math
   defdelegate asin(x), to: :math
@@ -65,4 +72,5 @@ defmodule Exmath do
   defdelegate sqrt(x), to: :math
   defdelegate tan(x), to: :math
   defdelegate tanh(x), to: :math
+  # }}}
 end
