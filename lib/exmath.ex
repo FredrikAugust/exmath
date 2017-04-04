@@ -44,4 +44,25 @@ defmodule Exmath do
   def hypergeometric_distribution(k, nn, kk, n) do
     (nPr(kk, k)*nPr(nn-kk, n-k))/nPr(nn, n)
   end
+
+  # Delegate all of the default functions in erlangs math module
+  defdelegate acos(x), to: :math
+  defdelegate acosh(x), to: :math
+  defdelegate asin(x), to: :math
+  defdelegate asinh(x), to: :math
+  defdelegate atan(x), to: :math
+  defdelegate atan2(x, y), to: :math
+  defdelegate atanh(x), to: :math
+  defdelegate cos(x), to: :math
+  defdelegate cosh(x), to: :math
+  defdelegate exp(x), to: :math
+  defdelegate log(x), to: :math
+  defdelegate log10(x), to: :math
+  defdelegate log2(x), to: :math
+  defdelegate pow(x, y), to: :math
+  defdelegate sin(x), to: :math
+  defdelegate sinh(x), to: :math
+  defdelegate sqrt(x), to: :math
+  defdelegate tan(x), to: :math
+  defdelegate tanh(x), to: :math
 end
