@@ -18,4 +18,20 @@ defmodule Exmath.Mixfile do
   defp deps do
     []
   end
+
+  defp description do
+    """
+    A library for performing some math operations that I frequently use in maths at school. Mainly related to probabilistic maths.
+    """
+  end
+
+  defp package do
+    [
+      name: :exmath,
+      files: ["lib", "mix.exs", "README*", "LICENSE"],
+      maintainers: ["Fredrik August Madsen-Malmo"],
+      licenses: ["MIT License"],
+      links: %{"github" => "https://github.com/fredrikaugust/exmath"}
+    ]
+  end
 end
