@@ -52,4 +52,11 @@ defmodule ExmathTest do
     assert Exmath.stirlings2(3, 2) == 3
     assert Exmath.stirlings2(3, 3) == 1
   end
+
+  test "bell numbers" do
+    assert Exmath.bell_number(0) == 1
+    assert Exmath.bell_number(1) == 1
+    assert Exmath.bell_number(2) == 2
+    assert Exmath.bell_number(6) == 203
+  end
 end

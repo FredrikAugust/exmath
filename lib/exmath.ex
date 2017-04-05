@@ -67,6 +67,15 @@ defmodule Exmath do
     end)
   end
 
+  @doc """
+  Calculates the n-th bell number
+  """
+  def bell_number(n) do
+    Enum.reduce((0..n), 0, fn(k, acc) ->
+      acc + stirlings2(n, k)
+    end)
+  end
+
   # Delegate all of the default functions in erlangs math module {{{
   defdelegate acos(x), to: :math
   defdelegate acosh(x), to: :math
