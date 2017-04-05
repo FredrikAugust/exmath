@@ -10,6 +10,7 @@ Exmath is a library that provides some quite specific math formulas.
 * Retrieve a row from Pascals triangle
 * Hypergeometric distribution 
 * Average growth between two points in a graph
+* All the math functions from erlang (:math)
 
 ## Installation
 
