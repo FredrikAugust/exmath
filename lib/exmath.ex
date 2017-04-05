@@ -11,6 +11,9 @@ defmodule Exmath do
   @doc """
   Combinations formula
   A formula for the number of possible combinations of r elements from a set of n elements
+  Notation:
+  ( n )
+  ( r )
   """
   def nCr(n, r) do
     factorial(n)/(factorial(r)*factorial((n-r)))
@@ -51,6 +54,18 @@ defmodule Exmath do
   Get the average growth-factor between two points
   """
   def average_growth({p1_x, p1_y}, {p2_x, p2_y}), do: (p2_y-p1_y)/(p2_x-p1_x)
+
+  def stirlings2(_n, 1), do: 1
+  def stirlings2(n, n), do: 1
+
+  @doc """
+  Computes the stirling number of the second kind
+  """
+  def stirlings2(n, k) do
+    (1/factorial(k))*Enum.reduce((0..k), 0, fn(j, acc) ->
+      acc + :math.pow(-1, k-j)*nCr(k, j)*:math.pow(j, n)
+    end)
+  end
 
   # Delegate all of the default functions in erlangs math module {{{
   defdelegate acos(x), to: :math

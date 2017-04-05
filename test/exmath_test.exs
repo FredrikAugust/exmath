@@ -46,4 +46,10 @@ defmodule ExmathTest do
   test "average growth in same point" do
     assert Exmath.average_growth({1, 1}, {1, 1}) == 0.0
   end
+
+  test "stirling number of the second kind" do
+    assert Exmath.stirlings2(3, 1) == 1
+    assert Exmath.stirlings2(3, 2) == 3
+    assert Exmath.stirlings2(3, 3) == 1
+  end
 end

@@ -11,6 +11,7 @@ Exmath is a library that provides some quite specific math formulas.
 * Hypergeometric distribution 
 * Average growth between two points in a graph
 * All the math functions from erlang (:math)
+* Stirling numbers of the second kind
 
 ## Installation
 
