@@ -12,8 +12,7 @@ defmodule Exmath do
   Combinations formula
   A formula for the number of possible combinations of r elements from a set of n elements
   Notation:
-  ( n )
-  ( r )
+  ( n \n r )
   """
   def nCr(n, r) do
     factorial(n)/(factorial(r)*factorial((n-r)))
