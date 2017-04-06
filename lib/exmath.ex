@@ -131,8 +131,8 @@ defmodule Exmath do
 
   If you have a set of 10 images, how many different ways can you group them?
 
-    iex> Exmath.bell_number(10)
-    115_975.0
+      iex> Exmath.bell_number(10)
+      115_975.0
   """
   @spec bell_number(number) :: float
   def bell_number(n) do
