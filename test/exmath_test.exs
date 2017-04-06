@@ -2,48 +2,32 @@ defmodule ExmathTest do
   use ExUnit.Case
   doctest Exmath
 
-  test "factorial of 0 is 1" do
+  test "factorial" do
     assert Exmath.factorial(0) == 1
-  end
-
-  test "factorial of 4 is 24" do
     assert Exmath.factorial(4) == 24
   end
 
-  test "nCr of 8 and 3 is 56" do
+  test "nCr" do
     assert Exmath.nCr(8, 3) == 56
-  end
-
-  test "nCr of 0 and 0 is 1" do
     assert Exmath.nCr(0, 0) == 1
   end
 
-  test "nPr of 0 and 0 is 1" do
+  test "nPr" do
     assert Exmath.nPr(0, 0) == 1
-  end
-
-  test "nPr of 5 and 5 is 120" do
     assert Exmath.nPr(5, 5) == 120
   end
 
-  test "prints first row of pascals triangle" do
+  test "pascals triangle" do
     assert Exmath.pascals_triangle_row(0) == [1.0]
-  end
-
-  test "prints 5th row of pascals triangle" do
     assert Exmath.pascals_triangle_row(4) == [1.0, 4.0, 6.0, 4.0, 1.0]
   end
 
   test "hypergeometric distribution" do
-    # The probability that neither of the next two cards turned are clubs
     assert Float.round(Exmath.hypergeometric_distribution(0, 47, 9, 2), 2) == 0.65
   end
 
   test "average growth between two points" do
     assert Exmath.average_growth({1, 1}, {2, 2}) == 1.0
-  end
-
-  test "average growth in same point" do
     assert Exmath.average_growth({1, 1}, {1, 1}) == 0.0
   end
 
