@@ -3,7 +3,7 @@ defmodule Exmath.Mixfile do
 
   def project do
     [app: :exmath,
-     version: "0.2.1.1",
+     version: "0.2.2",
      elixir: "~> 1.4",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
