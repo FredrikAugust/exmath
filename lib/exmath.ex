@@ -1,4 +1,5 @@
 defmodule Exmath do
+  def factorial(n) when n <= 1, do: 1
   @doc """
   Factorial will multiply n with n-1 until n <= 1.
 
@@ -8,7 +9,6 @@ defmodule Exmath do
       24
   """
   @spec factorial(number) :: integer
-  def factorial(n) when n <= 1, do: 1
   def factorial(n) do
     n * factorial(n-1)
   end
@@ -88,6 +88,7 @@ defmodule Exmath do
     (nCr(kk, k)*nCr(nn-kk, n-k))/nCr(nn, n)
   end
 
+  def average_growth(p1, p1), do: 0.0
   @doc """
   Get the average growth between two points in a graph.
 
@@ -100,9 +101,10 @@ defmodule Exmath do
       1.0
   """
   @spec average_growth({number, number}, {number, number}) :: float
-  def average_growth(p1, p1), do: 0.0
   def average_growth({p1_x, p1_y}, {p2_x, p2_y}), do: (p2_y-p1_y)/(p2_x-p1_x)
 
+  def stirlings2(_n, 1), do: 1
+  def stirlings2(n, n), do: 1
   @doc """
   Computes the stirling number of the second kind.
   This is how many ways you can partition n elements into k groups.
@@ -115,8 +117,6 @@ defmodule Exmath do
       9330.0
   """
   @spec stirlings2(number, number) :: float
-  def stirlings2(_n, 1), do: 1
-  def stirlings2(n, n), do: 1
   def stirlings2(n, k) do
     (1/factorial(k))*Enum.reduce((0..k), 0, fn(j, acc) ->
       acc + :math.pow(-1, k-j)*nCr(k, j)*:math.pow(j, n)
