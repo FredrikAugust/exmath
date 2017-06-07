@@ -141,6 +141,19 @@ defmodule Exmath do
     end)
   end
 
+  @doc """
+  Calculates the hypothenus using the pythagoras theorem
+
+  # Example
+  
+    iex> Exmath.pythagoras(4, 3)
+    5.0
+  """
+  @spec pythagoras(number, number) :: float
+  def pythagoras(x, y) do
+    :math.sqrt(:math.pow(x, 2) + :math.pow(y, 2))
+  end
+
   # Delegate all of the default functions in erlangs math module {{{
   defdelegate acos(x), to: :math
   defdelegate acosh(x), to: :math

@@ -7,6 +7,12 @@ defmodule ExmathTest do
     assert Exmath.factorial(4) == 24
   end
 
+  test "pythagoras" do
+    assert Exmath.pythagoras(3, 4) == 5.0
+    assert Exmath.pythagoras(5, 0) == 5.0
+    assert Exmath.pythagoras(0, 0) == 0.0
+  end
+
   test "nCr" do
     assert Exmath.nCr(8, 3) == 56
     assert Exmath.nCr(0, 0) == 1
